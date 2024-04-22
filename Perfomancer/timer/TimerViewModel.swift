@@ -56,8 +56,8 @@ class TimerViewModel : ObservableObject {
         self.secondsElapsed += 1
         
         seconds = secondsElapsed % 60
-        minutes = secondsElapsed / 60
-        hours = minutes / 60
+        minutes = (secondsElapsed % 3600) / 60
+        hours = secondsElapsed / 3600
         
         updateTimerText()
         updateResetEnabled()
