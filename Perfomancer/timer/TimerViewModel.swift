@@ -64,7 +64,7 @@ class TimerViewModel : ObservableObject {
     }
     
     private func updateResetEnabled() {
-        isResetEnabled = isRunning && secondsElapsed > 0
+        isResetEnabled = !isRunning && secondsElapsed > 0
     }
     
     private func updateTimerText(){
